@@ -728,11 +728,15 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
+    vendor/zuk/z2_plus/proprietary/bin/wfdservice:system/bin/wfdservice \
     vendor/zuk/z2_plus/proprietary/bin/dpmd:system/bin/dpmd \
     vendor/zuk/z2_plus/proprietary/etc/dpm/dpm.conf:system/etc/dpm/dpm.conf \
     vendor/zuk/z2_plus/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
     vendor/zuk/z2_plus/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
+    vendor/zuk/z2_plus/proprietary/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
+    vendor/zuk/z2_plus/proprietary/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
     vendor/zuk/z2_plus/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
+    vendor/zuk/z2_plus/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/zuk/z2_plus/proprietary/framework/com.qti.dpmframework.jar:system/framework/com.qti.dpmframework.jar \
     vendor/zuk/z2_plus/proprietary/framework/com.quicinc.cne.api-V1.1-java.jar:system/framework/com.quicinc.cne.api-V1.1-java.jar \
     vendor/zuk/z2_plus/proprietary/framework/com.quicinc.cne.constants-V1.0-java.jar:system/framework/com.quicinc.cne.constants-V1.0-java.jar \
@@ -776,14 +780,56 @@ PRODUCT_COPY_FILES += \
     vendor/zuk/z2_plus/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so
 
 PRODUCT_COPY_FILES += \
+    vendor/zuk/z2_plus/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+    vendor/zuk/z2_plus/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
+    vendor/zuk/z2_plus/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
+    vendor/zuk/z2_plus/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
+    vendor/zuk/z2_plus/proprietary/lib/libmmparser_lite.so:system/lib/libmmparser_lite.so \
+    vendor/zuk/z2_plus/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdavenhancements.so:system/lib/libwfdavenhancements.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdclient.so:system/lib/libwfdclient.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdcodecv4l2.so:system/lib/libwfdcodecv4l2.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdcommonutils.so:system/lib/libwfdcommonutils.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdconfigutils.so:system/lib/libwfdconfigutils.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdmminterface.so:system/lib/libwfdmminterface.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdmmsink.so:system/lib/libwfdmmsink.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdmmsrc.so:system/lib/libwfdmmsrc.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdnative.so:system/lib/libwfdnative.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdrtsp.so:system/lib/libwfdrtsp.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdservice.so:system/lib/libwfdservice.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfdsm.so:system/lib/libwfdsm.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfduibcinterface.so:system/lib/libwfduibcinterface.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfduibcsink.so:system/lib/libwfduibcsink.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfduibcsinkinterface.so:system/lib/libwfduibcsinkinterface.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfduibcsrc.so:system/lib/libwfduibcsrc.so \
+    vendor/zuk/z2_plus/proprietary/lib/libwfduibcsrcinterface.so:system/lib/libwfduibcsrcinterface.so \
+    vendor/zuk/z2_plus/proprietary/lib/libmmrtpencoder.so:system/lib/libmmrtpencoder.so \
     vendor/zuk/z2_plus/proprietary/lib/vendor.qti.esepowermanager@1.0.so:system/lib/vendor.qti.esepowermanager@1.0.so \
     vendor/zuk/z2_plus/proprietary/lib64/vendor.qti.esepowermanager@1.0.so:system/lib64/vendor.qti.esepowermanager@1.0.so \
+    vendor/zuk/z2_plus/proprietary/lib64/extractors/libmmparser.so:system/lib64/extractors/libmmparser.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libFileMux.so:system/lib64/libFileMux.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libOmxMux.so:system/lib64/libOmxMux.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libmmparser_lite.so:system/lib64/libmmparser_lite.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libmmrtpdecoder.so:system/lib64/libmmrtpdecoder.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libmmrtpencoder.so:system/lib64/libmmrtpencoder.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libwfdclient.so:system/lib64/libwfdclient.so \
+    vendor/zuk/z2_plus/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
     vendor/zuk/z2_plus/proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.esepowermanager@1.0-service \
+    vendor/zuk/z2_plus/proprietary/vendor/bin/wifidisplayhalservice:$(TARGET_COPY_OUT_VENDOR)/bin/wifidisplayhalservice \
+    vendor/zuk/z2_plus/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/zuk/z2_plus/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.0-service.rc \
     vendor/zuk/z2_plus/proprietary/vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.esepowermanager@1.0-impl.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.esepowermanager@1.0.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdhaldsmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhaldsmanager.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhdcpcp.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdmmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmmservice.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdmodulehdcpsession.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdmodulehdcpsession.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib64/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.esepowermanager@1.0.so
+    vendor/zuk/z2_plus/proprietary/vendor/lib64/libwfdhdcpcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdhdcpcp.so \
 
 PRODUCT_PACKAGES += \
     libgpustats \
@@ -793,8 +839,10 @@ PRODUCT_PACKAGES += \
     ims \
     uceShimService \
     CNEService \
+    WfdService \
     qcrilmsgtunnel \
     TimeService \
+    WfdCommon \
     QtiTelephonyServicelibrary \
     qcrilhook \
     qti-telephony-common \
