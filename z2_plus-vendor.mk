@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
     vendor/zuk/z2_plus/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/zuk/z2_plus/proprietary/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:system/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar \
     vendor/zuk/z2_plus/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
-    vendor/zuk/z2_plus/proprietary/lib/extractors/libmmparser.so:system/lib/extractors/libmmparser.so \
+    vendor/zuk/z2_plus/proprietary/lib/extractors/libmmparserextractor.so:system/lib/extractors/libmmparserextractor.so \
     vendor/zuk/z2_plus/proprietary/lib/libFileMux.so:system/lib/libFileMux.so \
     vendor/zuk/z2_plus/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
     vendor/zuk/z2_plus/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
@@ -219,10 +219,11 @@ PRODUCT_COPY_FILES += \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxAmrwbplusDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxAmrwbplusDec.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxApeDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxApeDec.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxApeDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxApeDecSw.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxDsdDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxDsdDec.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxEvrcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxEvrcDec.so \
+    vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxG711Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxG711Dec.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxQcelp13Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxQcelp13Dec.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxVideoDSMode.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVideoDSMode.so \
-    vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxVpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxVpp.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOmxWmaDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOmxWmaDec.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQSEEComAPI.so \
@@ -447,8 +448,6 @@ PRODUCT_COPY_FILES += \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libtrueportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrueportrait.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libtruescanner.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtruescanner.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
-    vendor/zuk/z2_plus/proprietary/vendor/lib/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpphvx.so \
-    vendor/zuk/z2_plus/proprietary/vendor/lib/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpplibrary.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdcommonutils_proprietary.so \
     vendor/zuk/z2_plus/proprietary/vendor/lib/libwfdhaldsmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfdhaldsmanager.so \
