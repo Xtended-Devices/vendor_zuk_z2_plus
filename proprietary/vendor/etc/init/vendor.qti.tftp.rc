@@ -1,0 +1,11 @@
+#
+# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+service vendor.tftp_server /vendor/bin/tftp_server
+   class core
+   user root
+    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/system-background/tasks
